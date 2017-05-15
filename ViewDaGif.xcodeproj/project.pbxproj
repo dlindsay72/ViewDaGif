@@ -7,21 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B52CE3E1ECA20350012DF71 /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B52CE3D1ECA20350012DF71 /* CollectionVC.m */; };
+		7B7F5CB41ECA3BF400354322 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F5CB31ECA3BF400354322 /* CollectionViewCell.m */; };
+		7B7F5CB91ECA3CE300354322 /* kitten@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F5CB81ECA3CE300354322 /* kitten@2x.jpg */; };
 		7BD747D31ECA1E87000F77FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD747D21ECA1E87000F77FD /* main.m */; };
 		7BD747D61ECA1E87000F77FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD747D51ECA1E87000F77FD /* AppDelegate.m */; };
-		7BD747D91ECA1E87000F77FD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BD747D81ECA1E87000F77FD /* ViewController.m */; };
 		7BD747DC1ECA1E87000F77FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD747DA1ECA1E87000F77FD /* Main.storyboard */; };
 		7BD747DE1ECA1E87000F77FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BD747DD1ECA1E87000F77FD /* Assets.xcassets */; };
 		7BD747E11ECA1E87000F77FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD747DF1ECA1E87000F77FD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B52CE3C1ECA20350012DF71 /* CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionVC.h; sourceTree = "<group>"; };
+		7B52CE3D1ECA20350012DF71 /* CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionVC.m; sourceTree = "<group>"; };
+		7B7F5CB21ECA3BF400354322 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		7B7F5CB31ECA3BF400354322 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		7B7F5CB81ECA3CE300354322 /* kitten@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kitten@2x.jpg"; sourceTree = "<group>"; };
 		7BD747CE1ECA1E87000F77FD /* ViewDaGif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewDaGif.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD747D21ECA1E87000F77FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7BD747D41ECA1E87000F77FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7BD747D51ECA1E87000F77FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7BD747D71ECA1E87000F77FD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7BD747D81ECA1E87000F77FD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7BD747DB1ECA1E87000F77FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BD747DD1ECA1E87000F77FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BD747E01ECA1E87000F77FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +44,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B7F5CB51ECA3C0600354322 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B52CE3C1ECA20350012DF71 /* CollectionVC.h */,
+				7B52CE3D1ECA20350012DF71 /* CollectionVC.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7B7F5CB61ECA3C0D00354322 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B7F5CB21ECA3BF400354322 /* CollectionViewCell.h */,
+				7B7F5CB31ECA3BF400354322 /* CollectionViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7B7F5CB71ECA3C1200354322 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		7BD747C51ECA1E87000F77FD = {
 			isa = PBXGroup;
 			children = (
@@ -58,12 +88,14 @@
 		7BD747D01ECA1E87000F77FD /* ViewDaGif */ = {
 			isa = PBXGroup;
 			children = (
+				7B7F5CB71ECA3C1200354322 /* Model */,
+				7B7F5CB61ECA3C0D00354322 /* View */,
+				7B7F5CB51ECA3C0600354322 /* Controller */,
 				7BD747D41ECA1E87000F77FD /* AppDelegate.h */,
 				7BD747D51ECA1E87000F77FD /* AppDelegate.m */,
-				7BD747D71ECA1E87000F77FD /* ViewController.h */,
-				7BD747D81ECA1E87000F77FD /* ViewController.m */,
 				7BD747DA1ECA1E87000F77FD /* Main.storyboard */,
 				7BD747DD1ECA1E87000F77FD /* Assets.xcassets */,
+				7B7F5CB81ECA3CE300354322 /* kitten@2x.jpg */,
 				7BD747DF1ECA1E87000F77FD /* LaunchScreen.storyboard */,
 				7BD747E21ECA1E87000F77FD /* Info.plist */,
 				7BD747D11ECA1E87000F77FD /* Supporting Files */,
@@ -139,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BD747E11ECA1E87000F77FD /* LaunchScreen.storyboard in Resources */,
+				7B7F5CB91ECA3CE300354322 /* kitten@2x.jpg in Resources */,
 				7BD747DE1ECA1E87000F77FD /* Assets.xcassets in Resources */,
 				7BD747DC1ECA1E87000F77FD /* Main.storyboard in Resources */,
 			);
@@ -151,9 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BD747D91ECA1E87000F77FD /* ViewController.m in Sources */,
 				7BD747D61ECA1E87000F77FD /* AppDelegate.m in Sources */,
 				7BD747D31ECA1E87000F77FD /* main.m in Sources */,
+				7B7F5CB41ECA3BF400354322 /* CollectionViewCell.m in Sources */,
+				7B52CE3E1ECA20350012DF71 /* CollectionVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +348,7 @@
 				7BD747E71ECA1E87000F77FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

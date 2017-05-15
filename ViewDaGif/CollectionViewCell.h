@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CollectionViewCell.h
 //  ViewDaGif
 //
 //  Created by Dan Lindsay on 2017-05-15.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CollectionViewCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 
 @end
-
