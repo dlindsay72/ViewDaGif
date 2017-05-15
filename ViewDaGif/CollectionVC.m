@@ -20,12 +20,20 @@ static NSString * const reuseIdentifier = @"GifViewerCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self refreshImages];
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) refreshImages {
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURL *url = [NSURL URLWithString:@"https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&rating=r"];
+    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSString *responseText = [[NSString alloc] initWithContentsOfURL:location encoding:NSUTF8StringEncoding error:nil];
+        NSLog(@"Response: %@", responseText);
+    }];
+    [task resume];
+    
+    
 }
 
 /*
