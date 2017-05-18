@@ -44,6 +44,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="0Sy-9B-vD5" id="gCi-N6-nZs"/>
+                                    <segue destination="cz8-Nt-V2O" kind="showDetail" identifier="showDetail" id="IAx-nP-Jwz"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -55,7 +56,43 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="imp-1Z-hOV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="-35.532233883058474"/>
+            <point key="canvasLocation" x="-777" y="-255"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="ylR-kk-9Ej">
+            <objects>
+                <viewController id="cz8-Nt-V2O" customClass="DetailVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MCu-MG-b3F"/>
+                        <viewControllerLayoutGuide type="bottom" id="ysg-2C-SwO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iae-Kg-sbj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYA-t1-TGt">
+                                <rect key="frame" x="10" y="133" width="355" height="400"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="sEY-UK-oel"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XYA-t1-TGt" firstAttribute="centerX" secondItem="iae-Kg-sbj" secondAttribute="centerX" id="AhF-wK-DKI"/>
+                            <constraint firstItem="XYA-t1-TGt" firstAttribute="centerY" secondItem="iae-Kg-sbj" secondAttribute="centerY" id="Dhf-kS-srt"/>
+                            <constraint firstItem="XYA-t1-TGt" firstAttribute="leading" secondItem="iae-Kg-sbj" secondAttribute="leading" constant="10" id="Y9x-N2-aB6"/>
+                            <constraint firstAttribute="trailing" secondItem="XYA-t1-TGt" secondAttribute="trailing" constant="10" id="zuD-HY-e0F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="XYA-t1-TGt" id="mus-JJ-WUn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5q-GF-GJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="-291"/>
         </scene>
     </scenes>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B10B16E1ECE0B0200A76427 /* Giphy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B10B16D1ECE0B0200A76427 /* Giphy.m */; };
+		7B303B521ECE12AD002C466B /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B303B511ECE12AD002C466B /* DetailVC.m */; };
 		7B52CE3E1ECA20350012DF71 /* CollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B52CE3D1ECA20350012DF71 /* CollectionVC.m */; };
 		7B7F5CB41ECA3BF400354322 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7F5CB31ECA3BF400354322 /* CollectionViewCell.m */; };
 		7B7F5CB91ECA3CE300354322 /* kitten@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B7F5CB81ECA3CE300354322 /* kitten@2x.jpg */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		7B10B16C1ECE0B0200A76427 /* Giphy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Giphy.h; sourceTree = "<group>"; };
 		7B10B16D1ECE0B0200A76427 /* Giphy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Giphy.m; sourceTree = "<group>"; };
+		7B303B501ECE12AD002C466B /* DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
+		7B303B511ECE12AD002C466B /* DetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
 		7B52CE3C1ECA20350012DF71 /* CollectionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionVC.h; sourceTree = "<group>"; };
 		7B52CE3D1ECA20350012DF71 /* CollectionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionVC.m; sourceTree = "<group>"; };
 		7B7F5CB21ECA3BF400354322 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -52,6 +55,8 @@
 			children = (
 				7B52CE3C1ECA20350012DF71 /* CollectionVC.h */,
 				7B52CE3D1ECA20350012DF71 /* CollectionVC.m */,
+				7B303B501ECE12AD002C466B /* DetailVC.h */,
+				7B303B511ECE12AD002C466B /* DetailVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				7BD747D61ECA1E87000F77FD /* AppDelegate.m in Sources */,
 				7BD747D31ECA1E87000F77FD /* main.m in Sources */,
 				7B10B16E1ECE0B0200A76427 /* Giphy.m in Sources */,
+				7B303B521ECE12AD002C466B /* DetailVC.m in Sources */,
 				7B7F5CB41ECA3BF400354322 /* CollectionViewCell.m in Sources */,
 				7B52CE3E1ECA20350012DF71 /* CollectionVC.m in Sources */,
 			);
