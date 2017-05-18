@@ -10,6 +10,7 @@
 #import "CollectionViewCell.h"
 
 @interface CollectionVC ()
+@property (nonatomic, strong) NSArray *imageURLs;
 
 @end
 
@@ -28,8 +29,24 @@ static NSString * const reuseIdentifier = @"GifViewerCell";
     NSURLSession *session = [NSURLSession sharedSession];
     NSURL *url = [NSURL URLWithString:@"https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC&rating=r"];
     NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSString *responseText = [[NSString alloc] initWithContentsOfURL:location encoding:NSUTF8StringEncoding error:nil];
-        NSLog(@"Response: %@", responseText);
+      //  NSString *responseText = [[NSString alloc] initWithContentsOfURL:location encoding:NSUTF8StringEncoding error:nil];
+        
+        NSData *data = [[NSData alloc] initWithContentsOfURL:location];
+        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        
+        
+        
+        // data array > images > downsized_still > url
+        
+        self.imageURLs = [dictionary valueForKeyPath:@"data.images.downsized_still.url"];
+        
+        NSLog(@"%@", self.imageURLs);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
+        
+        
     }];
     [task resume];
     
@@ -56,15 +73,19 @@ static NSString * const reuseIdentifier = @"GifViewerCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 49;
+    return [self.imageURLs count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     // Configure the cell
+    NSString *urlString = [self.imageURLs objectAtIndex:indexPath.row];  // or self.imageURLs[indexPath.row]
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSData *imageData = [[NSData alloc] initWithContentsOfURL:url];
     
-    cell.imageView.image = [UIImage imageNamed: @"kitten"];
+    
+    cell.imageView.image = [UIImage imageWithData:imageData];
     
     return cell;
 }
